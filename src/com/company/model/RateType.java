@@ -1,2 +1,6 @@
-package com.company.model;public class RateType {
+package com.company.model;
+
+public enum RateType {
+    CONSTANT,
+    DECREASING
 }
