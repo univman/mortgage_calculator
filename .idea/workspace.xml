@@ -2,30 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cf2d7b8-4550-42de-994c-bdf83f3f4dd8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/service/ConstantAmountsCalculationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/service/ConstantAmountsCalculationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/service/DecreasingAmountsCalculationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/service/DecreasingAmountsCalculationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/service/InterestAmount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/model/InputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/model/InputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/model/MortgageReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/model/MortgageReference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/model/MortgageResidual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/model/MortgageResidual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/model/Overpayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/model/Overpayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/model/Rate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/model/Rate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/model/RateAmounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/model/RateAmounts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/model/Summary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/model/Summary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/model/exception/MortgageException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/model/exception/MortgageException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/service/AmountsCalculationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/AmountsCalculationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/service/AmountsCalculationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/AmountsCalculationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/service/Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/Function.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/service/MortgageCalculationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/MortgageCalculationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/service/OverpaymentCalculationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/OverpaymentCalculationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/service/OverpaymentCalculationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/OverpaymentCalculationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/service/PrintingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/PrintingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/service/PrintingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/PrintingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/service/RateCalculationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/RateCalculationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/service/ReferenceCalculationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/ReferenceCalculationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/service/ReferenceCalculationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/ReferenceCalculationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/service/ResidualCalculationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/ResidualCalculationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/service/SummaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/SummaryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/service/SummaryServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/SummaryServiceFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -66,6 +51,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.company.model" />
+      <recent name="com.company.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.company.service" />
     </key>
   </component>

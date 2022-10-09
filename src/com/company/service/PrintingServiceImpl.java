@@ -7,7 +7,6 @@ import com.company.model.Summary;
 import com.company.model.exception.MortgageException;
 
 import java.math.BigDecimal;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
