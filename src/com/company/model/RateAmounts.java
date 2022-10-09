@@ -1,6 +1,7 @@
 package com.company.model;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class RateAmounts {
 
@@ -10,30 +11,33 @@ public class RateAmounts {
 
     private final BigDecimal capitalAmount;
 
-    public RateAmounts(BigDecimal rateAmount, BigDecimal interestAmount, BigDecimal capitalAmount) {
+    private final Overpayment overpayment;
+
+    public RateAmounts(
+            BigDecimal rateAmount,
+            BigDecimal interestAmount,
+            BigDecimal capitalAmount,
+            Overpayment overpayment
+    ) {
         this.rateAmount = rateAmount;
         this.interestAmount = interestAmount;
         this.capitalAmount = capitalAmount;
+        this.overpayment = overpayment;
     }
 
     public BigDecimal getRateAmount() {
-        return rateAmount;
+        return rateAmount.setScale(2, RoundingMode.HALF_UP);
     }
 
     public BigDecimal getInterestAmount() {
-        return interestAmount;
+        return interestAmount.setScale(2, RoundingMode.HALF_UP);
     }
 
     public BigDecimal getCapitalAmount() {
-        return capitalAmount;
+        return capitalAmount.setScale(2, RoundingMode.HALF_UP);
     }
 
-    @Override
-    public String toString() {
-        return "RateAmounts{" +
-                "rateAmount=" + rateAmount +
-                ", interestAmount=" + interestAmount +
-                ", capitalAmount=" + capitalAmount +
-                '}';
+    public Overpayment getOverpayment() {
+        return overpayment;
     }
 }
