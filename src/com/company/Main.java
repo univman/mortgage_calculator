@@ -6,16 +6,20 @@ import com.company.model.RateType;
 import com.company.service.*;
 
 import java.math.BigDecimal;
+import java.util.Map;
 
 public class Main {
 
     public static void main(String[] args) {
         InputData inputData = new InputData()
-                .withAmount(new BigDecimal("298000"))
+                .withAmount(new BigDecimal("300000"))
+                .withOverpaymentSchema(Map.of(
+//                        12, BigDecimal.valueOf(10000),
+//                        24, BigDecimal.valueOf(10000)
+                ))
+                .withMonthsDuration(BigDecimal.valueOf(360))
                 .withRateType(RateType.DECREASING)
-                .withOverpaymentReduceWay(Overpayment.REDUCE_PERIOD)
-                .withMonthsDuration(BigDecimal.valueOf(360));
-//                .withMonthsDuration(BigDecimal.valueOf(160));
+                .withOverpaymentReduceWay(Overpayment.REDUCE_RATE);
 
         PrintingService printingService = new PrintingServiceImpl();
         RateCalculationService rateCalculationService = new RateCalculationServiceImpl(

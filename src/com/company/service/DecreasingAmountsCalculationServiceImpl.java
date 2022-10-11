@@ -8,9 +8,9 @@ import com.company.model.RateAmounts;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class DecreasingAmountsCalculationServiceImpl
-        extends InterestAmount
-        implements DecreasingAmountsCalculationService {
+import static com.company.utils.CalculationUtils.calculateInterestAmount;
+
+public class DecreasingAmountsCalculationServiceImpl implements DecreasingAmountsCalculationService {
 
     @Override
     public RateAmounts calculate(InputData inputData, Overpayment overpayment) {
@@ -32,8 +32,8 @@ public class DecreasingAmountsCalculationServiceImpl
         BigDecimal interestPercent = inputData.getInterestPercent();
 
         BigDecimal residualAmount = previousRate.getMortgageResidual().getAmount();
-        BigDecimal referenceAmount = inputData.getAmount();
-        BigDecimal referenceDuration = inputData.getMonthsDuration();
+        BigDecimal referenceAmount = previousRate.getMortgageReference().getReferenceAmount();
+        BigDecimal referenceDuration = previousRate.getMortgageReference().getReferenceDuration();
 
         BigDecimal interestAmount = calculateInterestAmount(residualAmount, interestPercent);
         BigDecimal capitalAmount = calculateCapitalAmount(referenceAmount, referenceDuration, residualAmount);

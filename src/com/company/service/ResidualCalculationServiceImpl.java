@@ -7,6 +7,8 @@ import com.company.model.RateAmounts;
 
 import java.math.BigDecimal;
 
+import static com.company.utils.CalculationUtils.calculateResidualAmount;
+
 public class ResidualCalculationServiceImpl implements ResidualCalculationService {
     @Override
     public MortgageResidual calculate(RateAmounts rateAmounts, InputData inputData) {
@@ -24,12 +26,5 @@ public class ResidualCalculationServiceImpl implements ResidualCalculationServic
         BigDecimal residualDuration = residual.getDuration().subtract(BigDecimal.ONE);
 
         return new MortgageResidual(residualAmount, residualDuration);
-    }
-
-    private static BigDecimal calculateResidualAmount(RateAmounts rateAmounts, BigDecimal amount) {
-        return amount
-                .subtract(rateAmounts.getCapitalAmount())
-                .subtract(rateAmounts.getOverpayment().getAmount())
-                .max(BigDecimal.ZERO);
     }
 }

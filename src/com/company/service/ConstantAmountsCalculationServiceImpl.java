@@ -4,11 +4,14 @@ import com.company.model.InputData;
 import com.company.model.Overpayment;
 import com.company.model.Rate;
 import com.company.model.RateAmounts;
+import com.company.utils.CalculationUtils;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class ConstantAmountsCalculationServiceImpl extends InterestAmount implements ConstantAmountsCalculationService {
+import static com.company.utils.CalculationUtils.calculateInterestAmount;
+
+public class ConstantAmountsCalculationServiceImpl implements ConstantAmountsCalculationService {
 
 
     @Override
@@ -34,8 +37,8 @@ public class ConstantAmountsCalculationServiceImpl extends InterestAmount implem
         BigDecimal q = calculateQ(interestPercent);
 
         BigDecimal residualAmount = previousRate.getMortgageResidual().getAmount();
-        BigDecimal referenceAmount = inputData.getAmount();
-        BigDecimal referenceDuration = inputData.getMonthsDuration();
+        BigDecimal referenceAmount = previousRate.getMortgageReference().getReferenceAmount();
+        BigDecimal referenceDuration = previousRate.getMortgageReference().getReferenceDuration();
 
         BigDecimal interestAmount = calculateInterestAmount(residualAmount, interestPercent);
         BigDecimal rateAmount = calculateConstantRateAmount(
@@ -46,7 +49,7 @@ public class ConstantAmountsCalculationServiceImpl extends InterestAmount implem
     }
 
     private BigDecimal calculateQ(BigDecimal interestPercent) {
-        return interestPercent.divide(YEAR, 10, RoundingMode.HALF_UP).add(BigDecimal.ONE);
+        return interestPercent.divide(CalculationUtils.YEAR, 10, RoundingMode.HALF_UP).add(BigDecimal.ONE);
     }
 
     private BigDecimal calculateConstantRateAmount(
