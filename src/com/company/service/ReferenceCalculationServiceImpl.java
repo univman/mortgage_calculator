@@ -34,7 +34,7 @@ public class ReferenceCalculationServiceImpl implements ReferenceCalculationServ
     private MortgageReference reduceRateMortgageReference(RateAmounts rateAmounts, Rate previousRate) {
         if (rateAmounts.getOverpayment().getAmount().compareTo(BigDecimal.ZERO) > 0) {
             BigDecimal referenceAmount
-                    = calculateResidualAmount(rateAmounts, previousRate.getMortgageReference().getReferenceAmount());
+                    = calculateResidualAmount(previousRate.getMortgageReference().getReferenceAmount(), rateAmounts);
             BigDecimal referenceDuration = previousRate.getMortgageResidual().getDuration().subtract(BigDecimal.ONE);
             return new MortgageReference(referenceAmount, referenceDuration);
         }

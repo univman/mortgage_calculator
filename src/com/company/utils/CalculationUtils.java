@@ -13,10 +13,10 @@ public class CalculationUtils {
     public static final BigDecimal YEAR = BigDecimal.valueOf(12);
 
     public static BigDecimal calculateInterestAmount(BigDecimal residualAmount, BigDecimal interestPercent) {
-        return residualAmount.multiply(interestPercent).divide(YEAR, 50, RoundingMode.HALF_UP);
+        return residualAmount.multiply(interestPercent).divide(YEAR, 2, RoundingMode.HALF_UP);
     }
 
-    public static BigDecimal calculateResidualAmount(RateAmounts rateAmounts, BigDecimal amount) {
+    public static BigDecimal calculateResidualAmount(BigDecimal amount, RateAmounts rateAmounts) {
         return amount
                 .subtract(rateAmounts.getCapitalAmount())
                 .subtract(rateAmounts.getOverpayment().getAmount())

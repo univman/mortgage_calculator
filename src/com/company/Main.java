@@ -7,19 +7,27 @@ import com.company.service.*;
 
 import java.math.BigDecimal;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class Main {
 
     public static void main(String[] args) {
-        InputData inputData = new InputData()
-                .withAmount(new BigDecimal("300000"))
-                .withOverpaymentSchema(Map.of(
-//                        12, BigDecimal.valueOf(10000),
-//                        24, BigDecimal.valueOf(10000)
-                ))
+
+        // To jest rodzaj mapy, który w tym przypadku trzyma klucze posortowane rosnąco.
+        // Wiem, że nie tłumaczyłem go wcześniej. Spokojnie, jeszcze będzie ;)
+        Map<Integer, BigDecimal> overpaymentSchema = new TreeMap<>();
+        overpaymentSchema.put(5, BigDecimal.valueOf(12000));
+        overpaymentSchema.put(19, BigDecimal.valueOf(10000));
+        overpaymentSchema.put(28, BigDecimal.valueOf(11000));
+        overpaymentSchema.put(64, BigDecimal.valueOf(16000));
+        overpaymentSchema.put(78, BigDecimal.valueOf(18000));
+
+        InputData defaultInputData = new InputData()
+                .withAmount(new BigDecimal("296192.11"))
                 .withMonthsDuration(BigDecimal.valueOf(360))
+                .withOverpaymentReduceWay(Overpayment.REDUCE_RATE)
                 .withRateType(RateType.DECREASING)
-                .withOverpaymentReduceWay(Overpayment.REDUCE_RATE);
+                .withOverpaymentSchema(overpaymentSchema);
 
         PrintingService printingService = new PrintingServiceImpl();
         RateCalculationService rateCalculationService = new RateCalculationServiceImpl(
@@ -38,6 +46,6 @@ public class Main {
                 rateCalculationService,
                 SummaryServiceFactory.create()
         );
-        mortgageCalculationService.calculate(inputData);
+        mortgageCalculationService.calculate(defaultInputData);
     }
 }

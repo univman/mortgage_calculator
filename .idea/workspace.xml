@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cf2d7b8-4550-42de-994c-bdf83f3f4dd8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/utils/CalculationUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/model/exception/MortgageException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/model/exception/MortgageException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/service/AmountsCalculationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/AmountsCalculationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/service/ConstantAmountsCalculationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/ConstantAmountsCalculationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/service/DecreasingAmountsCalculationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/DecreasingAmountsCalculationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/service/InterestAmount.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/service/RateCalculationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/RateCalculationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/service/ReferenceCalculationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/ReferenceCalculationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/service/ReferenceCalculationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/ReferenceCalculationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/service/ResidualCalculationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/ResidualCalculationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/service/ResidualCalculationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/service/ResidualCalculationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/utils/CalculationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/utils/CalculationUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +43,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/user/OneDrive/java/mortgage_calculator",
+    "last_opened_file_path": "C:/Users/Marcin/OneDrive/java/mortgage_zaJ",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
